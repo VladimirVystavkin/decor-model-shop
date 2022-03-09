@@ -1,0 +1,73 @@
+@import "src/extend-class"
+@import "src/variables"
+
+
+.product
+  height: 400px
+  width: 225px
+  padding: 16px
+  box-sizing: border-box
+  position: relative
+  @extend %border-bottom-gray
+  @extend %border-right-gray
+  font: 62.5%/1.4 BlinkMacSystemFont, -apple-system, Arial, "Segoe UI", Roboto, Helvetica, sans-serif
+
+  img
+  box-sizing: border-box
+  max-width: 100%
+  max-height: 100%
+
+.product-button
+  width: 32px
+  height: 32px
+  background-color: white
+  border-width: 0
+  display: flex
+  align-items: center
+  justify-content: center
+
+  img
+    width: 24px
+    height: 24px
+.product-button:hover
+  border-radius: 5px
+  background-color: map-get($color-green, '5')
+
+
+.title
+  display: block
+  font-size: 14px
+  margin-bottom: 8px
+  &_picture
+    height: 260px
+    margin-bottom: 8px
+    display: flex
+    align-items: center
+  &_price
+    @extend %wrapper-row
+    font-size: 24px
+    line-height: 24px
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 4px
+
+    img
+      width: 18px
+      margin: 3px
+
+
+
+  &_good
+    display: block
+    font-size: 12px
+    color: map-get($color-green,'main')
+
+#wish-button
+  position: absolute
+  top: 8px
+  right: 8px
+
+#heart
+  filter: invert(58%) sepia(63%) saturate(736%) hue-rotate(0deg) brightness(106%) contrast(103%)
+#cart
+  filter: invert(27%) sepia(94%) saturate(2501%) hue-rotate(138deg) brightness(102%) contrast(101%)
