@@ -1,7 +1,7 @@
 <div class="wrap">
   <div class="toolbar" role="banner">
     <button><img src="assets/icon/toolbar/menu.svg"></button>
-    <div style="width: 240px ; background-color: #00a046"></div>
+    <a [routerLink]= "['/']" style="width: 240px ;background-color: green;line-height: 40px; font-family: -apple-system ; font-size: x-large">Decor&Model</a>
     <button id="catalog"><img src="assets/icon/toolbar/catalog.svg">Каталог</button>
     <div class="search-form">
       <input placeholder="Я ищу...">
@@ -13,18 +13,8 @@
     <button><img src="assets/icon/toolbar/cart.svg"></button>
   </div>
   <main >
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
+    <router-outlet></router-outlet>
+
   </main>
   <aside>
     <footer>
