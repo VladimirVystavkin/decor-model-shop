@@ -1,0 +1,40 @@
+@import "src/variables"
+
+.product-tab
+  padding: 0 32px
+
+  h1
+    line-height: 43px
+    font-size: 36px
+    color: map-get($color-black, 'main')
+    margin: 0 0 16px 0
+
+  h2
+    color: map-get($color-black, 'main')
+
+
+  &_list
+    height: 32px
+    padding: 0 32px
+    background-color: map-get($color-black, '5')
+    list-style-type: none
+    display: flex
+    flex-direction: row
+    gap: 8px
+
+    a
+      line-height: 32px
+      height: 32px
+      color: map-get($color-blue, 'main')
+      font-size: 14px
+      cursor: pointer
+
+    li:hover
+      border-bottom: map-get($color-green, 'main') 2px solid
+
+    a:hover
+      color: map-get($color-green, 'main')
+
+
+
+
