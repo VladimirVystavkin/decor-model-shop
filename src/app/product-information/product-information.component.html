@@ -1,21 +1,20 @@
 <div class="product-tab">
   <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
   <ul class="product-tab_list">
-    <li>
-      <a>Все о товаре</a>
+    <li [routerLinkActive]="'active'">
+      <a [routerLink]="['/product-information','all-information']">Все о товаре</a>
     </li>
-    <li>
+    <li [routerLinkActive]="'active'">
       <a [routerLink]="['/product-information','specification']">Характеристики</a>
     </li>
-    <li>
+    <li [routerLinkActive]="'active'">
       <a [routerLink]="['/product-information','gallery']" >Фото</a>
     </li>
-    <li>
+    <li [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">
       <a [routerLink]="['/product-information','description']">Описания товара</a>
     </li>
   </ul>
   <div>
-
     <router-outlet></router-outlet>
   </div>
 <!--  <app-product-gallery></app-product-gallery>-->

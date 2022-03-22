@@ -10,6 +10,7 @@ import { ProductInformationComponent } from './product-information/product-infor
 import { ProductSpecificationComponent } from './product-information/product-specification/product-specification.component';
 import { ProductGalleryComponent } from './product-information/product-gallery/product-gallery.component';
 import { ProductDiscriptionComponent } from './product-information/product-discription/product-discription.component';
+import { AllInformationComponent } from './product-information/all-information/all-information.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ProductDiscriptionComponent } from './product-information/product-discr
     ProductInformationComponent,
     ProductSpecificationComponent,
     ProductGalleryComponent,
-    ProductDiscriptionComponent
+    ProductDiscriptionComponent,
+    AllInformationComponent
   ],
   imports: [
     BrowserModule
