@@ -11,6 +11,7 @@ import { ProductSpecificationComponent } from './product-information/product-spe
 import { ProductGalleryComponent } from './product-information/product-gallery/product-gallery.component';
 import { ProductDiscriptionComponent } from './product-information/product-discription/product-discription.component';
 import { AllInformationComponent } from './product-information/all-information/all-information.component';
+import { ShopingListComponent } from './shoping-list/shoping-list.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AllInformationComponent } from './product-information/all-information/a
     ProductSpecificationComponent,
     ProductGalleryComponent,
     ProductDiscriptionComponent,
-    AllInformationComponent
+    AllInformationComponent,
+    ShopingListComponent
   ],
   imports: [
     BrowserModule

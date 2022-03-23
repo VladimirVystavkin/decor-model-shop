@@ -1,0 +1,79 @@
+@import "src/variables"
+@import "src/extend-class"
+%table-border-gray
+  border: 1px solid map-get($color-black, '20')
+  border-collapse: collapse
+  border-spacing: 0
+
+table
+
+  @extend %table-border-gray
+  border-radius: 10px
+
+
+th
+  @extend %table-border-gray
+  background-color: map-get($color-black, '5')
+  height: 15px
+  padding: 22px 15px
+
+td
+  @extend %table-border-gray
+  padding: 15px
+  height: 100px
+tr
+  box-sizing: border-box
+
+.shopping-list
+  width: 750px
+  padding: 24px
+  background-color: $color-white
+  border-radius: 8px
+
+.shopping-table
+  width: 100%
+.product
+  &_remove
+    border-right-width: 0
+    text-align: center
+    width: 42px
+    img
+      width : 12px
+  &_thumbnail
+    border-left-width: 0
+    img
+      width: 80px
+
+
+.cart-collaterals
+  margin-top: 40px
+  background-color: map-get($color-black, '5')
+
+  h2
+    margin: 0
+    font-size: 15px
+    background-color: map-get($color-green, 'main')
+    color: $color-white
+    padding: 15px
+    line-height: 20px
+    border-radius: 12px 12px 0 0
+
+  a
+    cursor: pointer
+    display: flex
+    justify-content: center
+    height: 20px
+    line-height: 20px
+    font-size: 15px
+    padding: 15px
+    background-color: map-get($color-black, 'main')
+    color: $color-white
+    border-radius: 0 0 12px 12px
+
+  &_subtotal
+    height: 50px
+    @extend %border-bottom-gray
+
+  &_total
+    height: 50px
+

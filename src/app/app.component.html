@@ -10,9 +10,10 @@
 
     <div id="language">RU</div>
     <button><img src="assets/icon/toolbar/user.svg"></button>
-    <button><img src="assets/icon/toolbar/cart.svg"></button>
+    <button (click)="shoppingList = !shoppingList"><img src="assets/icon/toolbar/cart.svg"></button>
   </div>
   <main >
+    <app-shoping-list *ngIf="shoppingList" (click)="shoppingList = !shoppingList"></app-shoping-list>
     <router-outlet></router-outlet>
 
   </main>

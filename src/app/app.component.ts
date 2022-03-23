@@ -7,7 +7,7 @@ import {SocialMediaDto} from "./social-media/social-media-dto";
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-
+  shoppingList : boolean = false
   title = 'decormodel';
   socialMedias: SocialMediaDto[] = [
     {name: 'facebook', link: "hreadfa", backgroundColor: {backgroundColor: "#506098"} }

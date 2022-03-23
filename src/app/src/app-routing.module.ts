@@ -16,8 +16,6 @@ const routes : Routes = [
       ,{path:'description' , component:ProductDiscriptionComponent}
       ,{path:'all-information',component:AllInformationComponent}
     ]}
-
-
 ]
 
 @NgModule({
