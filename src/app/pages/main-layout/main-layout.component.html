@@ -1,0 +1,56 @@
+<div class="wrap">
+  <app-toolbar [visibleButtonUser]="false"></app-toolbar>
+  <main>
+
+
+    <!--  <app-shoping-list *ngIf="shoppingList"></app-shoping-list>-->
+    <router-outlet></router-outlet>
+
+  </main>
+  <aside>
+    <footer>
+      <div>
+        <h3>Мы в социальных сетях</h3>
+        <ul class="wrap">
+          <li *ngFor="let socialMedia of socialMedias">
+            <app-social-media [socialMedia]="socialMedia">
+
+            </app-social-media>
+          </li>
+
+        </ul>
+      </div>
+      <div>
+        <div class="side-links">
+          <h3>Информацыя о компании</h3>
+          <a>О нас</a>
+          <a>Условия использования сайта</a>
+          <a>Контакты</a>
+        </div>
+        <div class="side-links">
+          <h3>Помощь</h3>
+          <a>Доставка и оплата</a>
+          <a>Возврат товара</a>
+        </div>
+        <div class="side-links">
+          <h3>Сервисы</h3>
+        </div>
+        <div class="side-links">
+          <h3>Партнерам</h3>
+          <a>Сотрудничество с нами</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p id="license"> ТМ используется на основании лицензии правообладателя Decor&ModelLTD </p>
+        <p> ©&nbsp;Интернет-магазин «Decor & Model™»<br>
+          <time>2001-2022</time>
+        </p>
+      </div>
+
+    </footer>
+  </aside>
+  <div class="content" role="main">
+
+
+  </div>
+</div>

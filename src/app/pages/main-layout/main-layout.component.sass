@@ -1,0 +1,74 @@
+@import "../../../variables"
+@import "../../../extend-class"
+
+
+footer
+  height: 100%
+  width: 100%
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    gap: 8px
+
+  p
+    margin: 12px 0 0 0
+    font-size: 12px
+    line-height: 14px
+
+  div
+    @extend %border-bottom-gray
+    @extend %padding-card
+
+  a
+    display: block
+    padding: 0 4px
+    font-size: 14px
+    line-height: 32px
+    color: map-get($color-black, main)
+    cursor: pointer
+    text-decoration: none
+
+  a:hover
+    text-decoration: underline
+
+aside
+  width: 300px
+  @extend %border-right-gray
+  align-self: start
+
+main
+  align-self: start
+  margin: 20px 0 0 0
+
+app-shoping-list
+  position: fixed
+  top: 10%
+  left: 25%
+  z-index: 100
+
+
+
+
+
+.content
+  display: flex
+  margin-top: 60px
+  padding: 0
+  flex-direction: column
+  align-items: center
+
+.side-links
+  padding: 8px 0 16px !important
+
+
+
+
+#license
+  color: map-get($color-black, '60')
+
+.wrap
+  @extend %wrapper-row
+  flex-direction: row-reverse
+  justify-content: center

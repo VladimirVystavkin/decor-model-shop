@@ -1,0 +1,35 @@
+<div  class="background-shopping-list"  ></div>
+<div class="shopping-list">
+
+  <table class="shopping-table">
+
+    <thead>
+    <tr>
+      <th id="remove" class="product_remove" ></th>
+      <th class="product_thumbnail"></th>
+      <th class="product_name">Название</th>
+      <th class="product_price">Цена</th>
+      <th class="product_quantity">Количество</th>
+      <th id="total" class="product-subtotal" >Всего</th>
+    </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let product of products"  >
+        <td class="product_remove" (click)="deleteProductFromShoppingList(product.id)"><img src="../../../../assets/image/close.svg"></td>
+        <td class="product_thumbnail"><img src="../../../../assets/image/placeholder-product.png"></td>
+        <td class="product_name">{{product.name}}</td>
+        <td class="product_price">{{product.price | currency:'USD'}}</td>
+        <td class="product_quantity"><div class="product_quantity_control"><button (click)="decreaseCountProduct(product.id)">-</button><input  [value]="product.count" ><button (click)="increaseCountProduct(product.id)">+</button></div></td>
+        <td class="product-subtotal">{{(product.price * product.count)| currency: 'USD'}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="cart-collaterals">
+    <h2>Общая сумма</h2>
+    <div class="cart-collaterals_subtotal"><span>Промежуточный итог</span><span>{{allPrice | currency:'USD'}}</span></div>
+    <div class="cart-collaterals_subtotal"><span>Всего</span><span id="cart-total">{{allPrice | currency:'USD'}}</span></div>
+    <a>Купить</a>
+  </div>
+</div>
+

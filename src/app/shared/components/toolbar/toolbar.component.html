@@ -1,0 +1,18 @@
+<div class="wrap">
+  <div class="toolbar" role="banner">
+    <button><img src="assets/icon/toolbar/menu.svg"></button>
+    <a class="decormodel-logo" [routerLink]="['/']"><span style="color: white">DECOR</span><span>&</span><span
+      style="color:white">MODEL</span></a>
+    <button id="catalog"><img src="assets/icon/toolbar/catalog.svg">Каталог</button>
+    <div class="search-form">
+      <input placeholder="Я ищу...">
+      <button>Найти</button>
+    </div>
+    <div class="header-actions">
+      <div id="language">RU</div>
+      <button *ngIf="visibleButtonUser"><img src="assets/icon/toolbar/user.svg"></button>
+      <button *ngIf="visibleButtonCaret" (click)="visibleShoppingList = !visibleShoppingList"><img src="assets/icon/toolbar/cart.svg"></button>
+    </div>
+
+  </div>
+</div>
