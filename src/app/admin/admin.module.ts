@@ -8,6 +8,7 @@ import {CreatePageComponent} from './create-page/create-page.component';
 import {EditPageComponent} from './edit-page/edit-page.component';
 import {AppModule} from "../app.module";
 import {SharedModule} from "../shared/shared.module";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,6 +21,8 @@ import {SharedModule} from "../shared/shared.module";
   imports: [
     CommonModule,
     SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forChild([{
       path: '', component: AdminLayoutComponent, children: [
         {path: '', redirectTo: '/admin/login', pathMatch: 'full'},

@@ -1,1 +1,41 @@
-<p>login-page works!</p>
+<div class="background">
+  <div class="container">
+    <div class="login-window">
+
+      <h4>We are The DecorModel Team</h4>
+      <p>Please login to your account</p>
+      <form [formGroup]="form">
+
+        <div  class="form-control" [ngClass]="{invalid: this.emailControlInvalid()}">
+          <input id="email" type="email" formControlName="email"/>
+          <small *ngIf="this.emailControl.errors?.required">Error:&nbsp;email input field empty</small>
+          <small *ngIf="this.emailControl.errors?.email">Error: incorrect email</small>
+        </div>
+
+        <div class="form-control"  [ngClass]="{invalid:this.passwordControlInvalid()}">
+          <input id="password" type="password" formControlName="password"/>
+          <small *ngIf="this.passwordControl.errors?.required">Error:&nbsp;password input field  empty</small>
+          <small *ngIf="this.passwordControl.errors?.minlength">Error: short password.
+            Actual length: {{this.passwordControl.errors?.minlength.actualLength}}
+            min length: {{this.passwordControl.errors?.minlength.requiredLength}}</small>
+        </div>
+
+        <button class="" type="submit" type="button" (click)="submit()">Log in</button>
+
+      </form>
+
+
+    </div>
+
+
+    <div class="description-company ">
+      <div>
+        <h4>We are more than just a company</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+
+  </div>
+</div>

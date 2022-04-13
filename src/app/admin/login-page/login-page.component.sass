@@ -1,0 +1,79 @@
+@import "src/variables"
+@import "src/extend-class"
+form
+  display: flex
+  flex-direction: column
+  gap: 16px
+
+.background
+  background-color: #eee
+  z-index: 20
+  height: 100%
+  width: 100%
+  position: fixed
+  top: 0
+  left: 0
+  display: flex
+
+.container
+  @extend %wrapper-row
+  margin: auto
+  max-height: 750px
+  max-width: 700px
+  border-radius: 0.3rem
+  background: #ffffff
+  input
+    padding: 0.33em 0.75em
+    line-height: 1.6
+    font-size: 1rem
+
+  h4
+    font-weight: 500
+    font-size: 1.5rem
+    line-height: 1.2
+  p
+    font-size: .875rem
+  button
+    height: 36px
+    width: 240px
+    border: 0
+    color: white
+    border: 0.3rem
+
+    @extend %gradient-background
+  small
+    color: map-get($color-red ,"main" )
+
+.login-window
+  flex-basis: 50%
+  text-align: center
+  margin: 0 1.5rem
+  padding: 3rem
+
+
+.description-company
+  flex-basis: 50%
+  height: 500px
+  color: #ffffff
+  display: flex
+  align-items: center
+  div:first-of-type
+    padding: 3rem
+    margin: 0 1.5rem
+  h4:first-of-type
+    margin-bottom: 16px
+  @extend %gradient-background
+
+%gradient-background
+  /* fallback for old browsers */
+  background: #00a046
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(0, 160, 70, 0.5), rgba(166, 248, 99, 0.5))
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(0, 160, 70, 0.5), rgba(166, 248, 99, 0.5))
+
+
+
+
