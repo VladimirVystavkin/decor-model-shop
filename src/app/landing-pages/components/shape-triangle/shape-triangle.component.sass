@@ -1,0 +1,18 @@
+@import "/src/app/landing-pages/land-variables"
+.shape
+  &_position
+    &_top
+      position: relative
+      top: -88px
+
+    &_bottom
+      position: relative
+      top: -1px
+
+  &_background
+      svg
+        height: 90px
+        width: 100%
+        fill: map-get($global-color,'background')
+  &_revert
+    transform: rotate(180deg  )

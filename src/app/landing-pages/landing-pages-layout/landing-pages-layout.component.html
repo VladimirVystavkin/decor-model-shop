@@ -1,1 +1,28 @@
-<p>landing-pages-layout works!</p>
+
+<div class="container">
+  <header class="land-toolbar">
+    <h2 class="logo">VLADIMIR VYSTAVKIN</h2>
+    <ul class="elementor_text">
+      <li><a href="" class=""></a>О НАС</li>
+      <li></li>
+      <li><a href=""></a>КОНТАКТЫ</li>
+      <li><a href=""></a>ДОСТАВКА И ОПЛАТА</li>
+      <li><a href=""></a>ВОЗВРАТ</li>
+      <li><a href=""></a>СОТРУДНИЧЕСТВО</li>
+    </ul>
+  </header>
+  <router-outlet></router-outlet>
+  <footer>
+    <h2 class="logo">Vladimir Vystavkin</h2>
+    <div class="copyright">
+      <p> ТМ используется на основании лицензии правообладателя Decor&ModelLTD ©&nbsp;Интернет-магазин «Decor &
+        Model™»<br>
+        <time>2001-2022</time>
+        <a [routerLink]="['/','company-inform','usage-rules']">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</a>
+      </p>
+    </div>
+  </footer>
+</div>
+
+
+

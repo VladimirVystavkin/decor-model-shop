@@ -1,0 +1,14 @@
+<div *ngIf="position == 'top'" [ngClass]="{
+'shape_position_bottom' : !topFlip ,
+'shape_position_top': topFlip,
+'shape_background' : true,
+'shape_revert': topFlip}"   data-negative="false">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+    <path class="" d="M738,99l262-93V0H0v5.6L738,99z"></path>
+  </svg>
+</div>
+<div *ngIf="!checkPosition(position)" class="shape_position_top shape_background" data-negative="false">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+    <path class="" d="M737.9,94.7L0,0v100h1000V0L737.9,94.7z"></path>
+  </svg>
+</div>

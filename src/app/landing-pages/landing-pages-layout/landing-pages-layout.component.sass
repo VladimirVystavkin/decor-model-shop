@@ -1,0 +1,128 @@
+@import "/src/app/landing-pages/land-variables"
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap')
+@font-face
+  font-family: "Logo"
+  src: local("Logo"), url(/src/app/landing-pages/asset/fonts/logo.ttf) format("truetype")
+
+@mixin title-font($size )
+  font-family: map-get($global-typography-family, 'title'), map-get($global-typography-family, 'insurance')
+  font-size: $size
+  font-weight: map-get($global-typography-weight, 'fat')
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  padding-top: 90px
+
+footer
+  text-align: center
+  font-family: "Open Sans"
+  font-size: 14px
+  color: #333333
+  h2
+    padding: 25px 0
+
+.logo
+  font-family: Bedas
+  text-decoration: underline
+  margin: auto 0
+  font-size: 41px
+
+.land-toolbar
+  width: 100%
+  height: 90px
+  padding: 0 6% 0 6%
+  background: #fff
+  color: #221f1f
+  box-shadow: 0 9px 35px -5px rgb(255 0 126  / 69%)
+  position: fixed
+  z-index: 1000
+  top: 0
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+
+  ul
+    height: 100%
+    list-style-type: none
+    display: flex
+    flex-direction: row
+    gap: 25px
+    justify-content: end
+    align-items: center
+
+    li
+      font-size: 14px
+      line-height: 14px
+      font-weight: 700
+      text-transform: uppercase
+      letter-spacing: .6px
+
+
+.container
+  font-family: map-get($global-typography-family, 'text'), map-get($global-typography-family, 'insurance')
+  color: map-get($global-typography-color , 'dark')
+  background: map-get($global-color, 'background')
+
+.elementor
+  &_title
+    &_large
+      @include title-font(map-get($global-topography-size, 'title-large'))
+
+    &_big
+      @include title-font(map-get($global-topography-size, 'title-big'))
+
+    &_middle-h
+      @include title-font(map-get($global-topography-size, 'title-middle-h'))
+
+    &_middle-b
+      @include title-font(map-get($global-topography-size, 'title-middle-b'))
+
+    &_middle-m
+      @include title-font(map-get($global-topography-size, 'title-middle-m'))
+
+    &_middle-s
+      @include title-font(map-get($global-topography-size, 'title-middle-s'))
+
+    &_color
+      color: map-get($global-typography-color, 'color')
+
+  &_text
+    &_big
+      font-size: map-get($global-topography-size, 'text-b')
+
+    &_small
+      font-size: map-get($global-topography-size, 'text-s')
+
+.gradient
+  /* fallback for old browsers */
+  background: map-get($global-color, 'two')
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(-45deg, map-get($global-color, 'one'), map-get($global-color, 'two'))
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(-45deg, map-get($global-color, 'one'), map-get($global-color, 'two'))
+  background-size: 400% 400%
+  animation: animate-background 15s ease infinite
+  color: map-get($global-typography-color , 'light')
+
+  &_border
+    border-radius: 10px
+    border: 10px solid
+    border-image: linear-gradient(45deg, rgba(203, 35, 118, 1) 0%, rgba(45, 39, 223, 1) 100%)
+    border-image-slice: 1
+
+@keyframes animate-background
+  0%
+    background-position: 0 50%
+  50%
+    background-position: 100% 50%
+  100%
+    background-position: 0 50%
+
+
+
+

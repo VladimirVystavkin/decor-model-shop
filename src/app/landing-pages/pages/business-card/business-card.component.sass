@@ -1,0 +1,68 @@
+@import "../../land-variables"
+@import "../../mixins"
+#about-me
+
+  @include wrap(row, no-wrap)
+  div:first-of-type
+    flex-basis: 40%
+    position: relative
+    display: flex
+    justify-content: flex-end
+    img
+      position: absolute
+      bottom: 0
+      height: 95%
+  div:last-child
+    padding: 12% 12% 15% 18%
+    flex-basis: 60%
+    h2
+      margin-bottom: 20px
+      p
+        display: inline
+
+#hard-skills
+  h3:first-of-type
+    text-align: center
+  ul
+
+    @include wrap(column , no-wrap)
+    gap: 30px
+    padding: 25px
+    li
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      gap: 25px
+      app-hard-skill
+        height: 100%
+
+#summary-qualifications
+
+  padding: 0 0  125px 0
+  section
+    @include wrap(row , wrap)
+    gap: 15px
+  app-hard-skill
+    color: map-get($global-typography-color , 'dark')
+    flex-basis: 30%
+
+  h2
+    padding-top: 40px
+    text-align: center
+
+#example3
+
+  height: 1200px
+
+#example4
+  height: 400px
+
+#example5
+
+  height: 400px
+
+#example6
+  height: 400px
+
+#example7
+  height: 400px

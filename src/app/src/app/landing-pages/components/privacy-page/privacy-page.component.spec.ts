@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PurshaesReturnsComponent } from './purshaes-returns.component';
+import { PrivacyPageComponent } from './privacy-page.component';
 
-describe('PurshaesReturnsComponent', () => {
-  let component: PurshaesReturnsComponent;
-  let fixture: ComponentFixture<PurshaesReturnsComponent>;
+describe('PrivacyPageComponent', () => {
+  let component: PrivacyPageComponent;
+  let fixture: ComponentFixture<PrivacyPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PurshaesReturnsComponent ]
+      declarations: [ PrivacyPageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PurshaesReturnsComponent);
+    fixture = TestBed.createComponent(PrivacyPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

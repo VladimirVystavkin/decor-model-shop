@@ -14,6 +14,7 @@ import { MainLayoutComponent } from './pages/main-layout/main-layout.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
 import {SharedModule} from "./shared/shared.module";
+import { PrivacyPageComponent } from './src/app/landing-pages/components/privacy-page/privacy-page.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {SharedModule} from "./shared/shared.module";
     ProductSpecificationComponent,
     ProductDiscriptionComponent,
     HomePageComponent,
-    MainLayoutComponent
+    MainLayoutComponent,
+    PrivacyPageComponent
   ],
   imports: [
     BrowserModule
